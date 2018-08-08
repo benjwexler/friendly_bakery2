@@ -1,0 +1,716 @@
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+    background: rgba(177, 205, 169, 0.07);
+    // background: rgba(177, 205, 169, 0.06);
+    // background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgjD88dW12T0_E2OaHjwptFQdLTkDEGxowAmwdBkfxpewbo3u9");
+    // background-repeat: no-repeat;
+    // background: black;
+    
+    
+}
+
+#background {
+    background-image: url("https://previews.123rf.com/images/kreatorex/kreatorex1503/kreatorex150300010/37406681-confectionery-and-bakery-background-with-elements-in-pastel-colors.jpg");
+    position: absolute;
+    height: 98vh;
+    width:  50%;
+    top: 1%; 
+    z-index: -99;
+    margin: auto;
+    opacity: .5;
+    filter: invert(100%) grayscale(70%);
+    // max-width: 500px;
+    
+ 
+    // margin: auto;
+    
+}
+
+#boss {
+    // @include flexContainer(568px, 310px, 1px solid black, column);
+    @include flexContainer(98vh, 97vw, 3px solid black, column);
+    margin: auto;
+    background: linear-gradient(to right, rgba(60, 26, 138, 0.755), rgba(143, 114, 210, 0.755));
+    // background: linear-gradient(to right, rgba(60, 26, 138, 1), rgba(143, 114, 210, 1));
+    // margin-top: 100px;
+//    border-left: 50px solid black;
+    max-width: 600px;
+    // opacity: .9;
+    
+    min-height: 568px;
+
+    
+    // background-image: url("https://pbs.twimg.com/profile_images/552145045663408129/egywNuyx_400x400.png")
+}
+
+#submitButton {
+    display: none;
+}
+
+#header {
+    @include flexContainer(10%, 100%, 1px solid black, row);
+    background-color: rgb(159, 175, 194);
+    // border-bottom: 5px solid black;
+    // max-height: 70px;
+    // min-width: 1500px;
+    // left: 0px;
+    // position: relative;
+    // margin: auto 0 auto 0;
+
+}
+
+#expandedMenu {
+    position: absolute;
+    background: rgb(33, 33, 33);
+    // height: 39.5%;
+    height: 25.5%;
+    width: 34%;
+    top: 11.5%;
+    opacity: .8;
+    border-radius: 5%;
+    display: none;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 20%;
+    animation: appear 400ms steps(1);
+    max-width: 120px;
+    z-index: 999;
+    // border: 2px dashed white;
+    // left: 15%;
+}
+
+@keyframes expand {
+    from {height: 0%;}
+    to {height: 19.5%;}
+}
+
+#menuRow1 {
+    @include flexContainer(0%, 00%, 0px solid white, row);
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Amatic SC', cursive;
+    padding-bottom: 45%;
+    justify-content: center;
+    // padding-top: 5%;
+    // animation: appear 1000ms 1;
+    // animation-delay: 800ms;
+
+}
+
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+#menuRow2 {
+    @include flexContainer(00%, 80%, 0px solid white, row);
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Amatic SC', cursive;
+    padding-bottom: 35%;
+    justify-content: center;
+    animation: appear 1500ms 1;
+    animation-delay: 200ms;
+    // padding-top: 30%;
+    // padding-left: 65%;
+    
+
+
+}
+
+#menuRow3 {
+    @include flexContainer(0%, 00%, 0px solid white, row);
+    margin: auto;
+
+    color: white;
+    font-size: 30px;
+    font-family: 'Amatic SC', cursive;
+    justify-content: center;
+    
+    // animation: appear 1800ms 1;
+    // animation-delay: 300ms;
+    // opacity: 0;
+    // animation-fill-mode: forwards;
+    // padding-top: 90%;
+    // padding-left: 30%;
+    
+
+
+}
+
+#searchIcon {
+    height: 90%; 
+    width: 90%;
+    margin: auto;
+    display: none;
+}
+
+#shoppingCartIcon {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    border-radius: 50%;
+    filter: invert(100%);
+    border: 7px dashed black;
+    opacity: .8;
+    
+    // left: 5%;
+}
+
+//  
+
+#mainContainer {
+    @include flexContainer(41%, 100%, 0px solid black, column);
+    // background-color: rgba(143, 114, 210, 0.755); 
+    // border-radius: 50%;
+    // opacity: .5;
+}
+
+#split {
+    @include flexContainer(8%, 100%, 0px solid black, column);
+    // background-color: rgba(143, 114, 210, 0.755);
+    background: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 1%;
+}
+
+#searchFormContainer {
+    @include flexContainer(100%, 80%, 0px solid black, column);
+    
+}
+
+#searchForm {
+    @include flexContainer(100%, 95%, 0px solid black, column);
+    background-color: rgb(159, 175, 194);
+    margin: auto;
+    font-size: 30px;
+    text-align: right;
+    justify-content: right;
+    font-family: 'Pacifico', cursive;
+}
+
+#searchBar {
+    @include flexContainer(100%, 100%, 2px solid black, column);
+    background: linear-gradient(to right, rgba(60, 26, 138, 0.755), rgba(143, 114, 210, 0.755));
+    background: white;
+    opacity: .5;
+    border-bottom: 2px solid black;
+    
+    // border-top-left-radius: 50%;
+    // display: none;
+}
+
+#secondMainContainer {
+    @include flexContainer(30%, 100%, 0px solid black, row);
+    background: rgba(59, 155, 199, 0.741);
+    // opacity: .7;
+    // position: relative;
+}
+
+#cakeContainer {
+    @include flexContainer(79%, 50%, 0px solid black, column);
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+    max-width: 200px;
+    
+}
+
+#cake {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1.5px solid rgb(57, 57, 57);
+}
+
+#muffinContainer {
+    @include flexContainer(80%, 50%, 0px solid black, column);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    max-width: 200px;
+}
+
+#muffin {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1.5px solid black;
+}
+
+#main1 {
+    @include flexContainer(20%, 100%, 0px solid black, column);
+    // background-color: rgba(143, 114, 210, 0.392); 
+    // border-top: 1px solid  black;
+    // max-width: 98%;
+    margin: auto;
+    border-bottom: 1px solid black;
+    border-top: 3px solid black;
+    background: Linear-gradient(to right, rgba(60, 26, 138, 0.755), rgba(143, 114, 210, 0.755));
+}
+
+#main1again {
+    @include flexContainer(100%, 100%, 0px solid black, column);
+    // background-color: rgba(143, 114, 210, 0.392); 
+}
+
+#cookieImageContainer {
+    @include flexContainer(100%, 100%, 0px solid black, column);
+    max-width: 350px;
+    margin: auto;
+    max-height: 300px;
+    border-radius: 50%;
+    position: relative;
+    // opacity: .2
+    // background: rgba(70, 66, 66, 0.796);
+}
+
+// #cookieImageContainer:hover { 
+//     opacity: .4;
+    
+// }
+
+#cookieImage {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    max-width: 600px;
+    margin: auto;
+    border: 2px solid rgba(17, 17, 17, 0.639);
+}
+
+// #cookiesText {
+//     @include flexContainer(20%, 50%, 0px solid black, column); 
+//     // margin: auto auto 10% auto;
+//     font-family: 'Amatic SC', cursive;
+//     font-size: 50px;
+//     position: absolute;
+//     top: 30%;
+//     left:40%;
+//     color: rgb(241, 245, 6);
+//     color: white;
+//     text-shadow: 2px 2px #ff0000;
+//     text-shadow: 2px 2px white;
+    
+    
+//     // border-radius: 80%;
+// }
+
+#cookiesText {
+    // @include flexContainer(100%, 100%, 0px solid black, column); 
+    // margin: auto auto 10% auto;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    position: absolute;
+top: 50%;
+left: 53%;
+transform: translate(-50%, -50%);
+    color: rgb(241, 245, 6);
+    color: white;
+    text-shadow: 2px 2px #ff0000; 
+    text-shadow: 2px 2px white;
+    border-radius: 50%;
+
+    
+    
+    // border-radius: 80%;
+}
+
+$textPositionHeight: 75%;
+$textColor: white;
+$coolYellow: rgb(241, 245, 6);
+
+#cakeText {
+    // @include flexContainer(13%, 27%, 0px dashed pink, column); 
+    // margin: auto auto 10% auto;
+    font-family: 'Amatic SC', cursive;
+    font-size: 45px;
+    position: absolute;
+    // margin-left: 5%;
+    // margin-top: 15%;
+top:64%;
+left: 48%;
+transform: translate(-50%, -50%);
+    color: $textColor;
+    text-shadow: 5px 20px #ff0000;
+    text-shadow: -3px 6px brown;
+    text-shadow: 2px 2px brown;
+    // text-shadow: 3px 3px rgba(199, 122, 122, 0.913);
+    // text-shadow: 2px 2px brown;
+    border-radius: 50%;
+    z-index: 50;;
+    
+    // border-radius: 80%;
+}
+
+// #muffinText {
+//     @include flexContainer(20%, 50%, 0px solid black, column); 
+//     // margin: auto auto 10% auto;
+//     font-family: 'Amatic SC', cursive;
+//     font-size: 45px;
+//     position: absolute;
+//     top: $textPositionHeight;
+//     left:57%;
+//     color: $textColor;
+//     text-shadow: 2px 2px #ff0000;
+//     z-index: 50;;
+//     // text-shadow: 2px 2px rgb(48, 21, 146);
+//     // text-shadow: -10px 20px #ff0000;
+    
+//     // border-radius: 80%;
+// }
+
+
+#muffinText {
+    // @include flexContainer(13%, 27%, 0px dashed pink, column); 
+    // margin: auto auto 10% auto;
+    font-family: 'Amatic SC', cursive;
+    font-size: 48px;
+    position: absolute;
+    // margin-left: 5%;
+    // margin-top: 15%;
+top:59%;
+left: 50%;
+transform: translate(-50%, -50%);
+    color: $textColor;
+    text-shadow: 5px 20px #ff0000;
+    text-shadow: -3px 6px brown;
+    text-shadow: 2px 2px brown;
+    text-shadow: 3px 3px rgba(199, 122, 122, 0.913);
+    // text-shadow: 2px 2px brown;
+    border-radius: 50%;
+    z-index: 50;;
+    
+    // border-radius: 80%;
+}
+
+
+// #coverCookie {
+//     @include flexContainer(5%, 30%, 0px solid black, row);
+//     background-color: white; 
+//     // right: 0px;
+//     margin: 0 0 auto auto;
+//     border-bottom-left-radius: 50%;
+// }
+
+#menuContainer {
+    @include flexContainer(90%, 14%, 0px solid black, column); 
+    margin: auto;
+    cursor: pointer;
+}
+
+#nameContainer {
+    @include flexContainer(100%, 52%, 0px solid black, column);
+}
+
+#name {
+    @include flexContainer(80%, 90%, 0px solid black, row);
+    margin: 5% auto auto 10px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    color: rgb(38, 121, 64);
+    letter-spacing: .5px;
+}
+#R{
+    font-size: 35px;
+    color: blue;
+    margin-top: -5px;
+}
+#B{
+    font-size: 30px;
+}
+#G{
+    font-size: 30px;
+}
+
+@media only screen and (min-width: 350px) {
+    #name {
+        font-size: 25px;
+    }
+
+    #R {
+        margin-top: 0px; 
+        font-size: 38px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #name {
+        font-size: 45px;
+    }
+
+    #R {
+        font-size: 50px; 
+    }
+}
+
+
+
+#searchIconContainer {
+    @include flexContainer(100%, 0%, 0px solid black, column);
+    margin: auto; 
+}
+#shoppingCartContainer {
+    @include flexContainer(100%, 25%, 0px solid black, column);
+    // box-shadow: 2px 3px rgb(19, 19, 19);
+    margin: auto; 
+    // border-left: 2px solid black;
+    // border-top: 1.5px solid black;
+    // width: 50%;
+    // border: 1px solid black;   
+    // margin: auto;
+    // opacity: .8;
+    // border-left: 1.5px solid black;
+    text-align: center;
+    overflow: hidden;
+    // transform: rotate(180deg);
+    // filter: blur(1px);
+    margin-top: -1px;
+
+}
+.bar1{
+    width: 100%;
+    height: 14%;
+    background-color: #333;
+    margin: 50% auto auto 5%;
+    margin: auto auto auto 5%;
+    // margin: 6px 0;
+    // transition: 0.4s;
+    border-radius: 0%;
+    max-height: 14px;
+    // transform: rotate(-45deg) translate(-9px, 6px);
+    
+}
+
+.bar3 {
+    width: 90%;
+    height: 14%;
+    background-color: #333;
+    margin: auto auto auto 5%;
+    // margin: 6px 0;
+    // transition: 0.4s;
+    border-radius: 0%;
+    max-height: 14px;
+    // transform: rotate(45deg) translate(-8px, -8px);
+
+    
+}
+
+.bar2 {
+    width: 70%;
+    height: 14%;
+    background-color: #333;
+    margin: auto auto auto 15%;
+    justify-content: center;
+    // margin: 6px 0;
+    // transition: 0.4s;
+    border-radius: 0%; 
+    // opacity: 0;
+}
+
+#footer {
+    @include flexContainer(10%, 100%, 1px solid black, row);
+    // background-color: rgba(30, 193, 196, 0.755);
+    background: white;
+    border-radius: 1%;
+    position: relative;
+}
+
+#socialMediaContainer {
+    @include flexContainer(55%, 30%, 0px solid black, row);
+    margin: auto; 
+    max-width:  120px;       
+}
+
+#fbContainer {
+    @include flexContainer(100%, 33%, 3px solid black, row);
+    max-height: 40px;
+    margin: auto;
+
+
+}
+
+#fb {
+    height: 100%;
+    width:  100%;
+    
+
+}
+
+#instaContainer {
+    @include flexContainer(100%, 30%, 0px solid black, row);
+    margin: auto; 
+    max-height: 40px;
+
+}
+
+#insta {
+    height: 100%;
+    width:  100%;
+}
+
+#twitterContainer {
+    @include flexContainer(100%, 33%, 0px solid black, row); 
+    margin: auto; 
+    max-height: 40px;
+
+}
+
+#twitter {
+    height: 100%;
+    width:  100%;
+}
+
+#freeShippingContainer {
+    @include flexContainer(50%, 26%, 1px solid black, row); 
+    margin: auto;
+    text-align: center;
+    // justify-content: center;s
+}
+
+#freeShippingText {
+    @include flexContainer(80%, 85%, 0px solid black, row); 
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    // font-family: 'Amatic SC', cursive;
+    // font-size: 18px;
+}
+
+a {
+    color: white;
+    text-decoration: none; /* no underline */
+  }
+
+  #cookieImages {
+    height: 50px;
+    width: 50px
+}
+
+#colLeft {
+    @include flexContainer(100%, 50%, 1px solid black, row);  
+    position: relative;
+}
+
+#colRight {
+    @include flexContainer(100%, 50%, 1px solid black, row);
+    position: relative;  
+}
+
+#cakeImageContainer {
+    // @include flexContainer(100%, 100%, 1px solid black, row); 
+    // margin: auto;
+    position: relative;
+    @include flexContainer(79%, 85%, 0px solid black, column);
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+    // max-width: 250px;
+}
+
+#muffinImageContainer {
+    // @include flexContainer(100%, 100%, 1px solid black, row); 
+    // margin: auto;
+    position: relative;
+    @include flexContainer(79%, 85%, 0px solid black, column);
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+    // max-width: 250px;
+}
+
+#cakeImage{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1.5px solid rgb(57, 57, 57);
+}
+
+#muffinImage{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1.5px solid rgb(57, 57, 57);
+}
+
+#back{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    // background: rgba(206, 139, 14, 0.7);
+    z-index: -99;
+    // transform: rotate(90deg);
+    
+    filter: grayscale(70%);
+    background-image: url("https://st3.depositphotos.com/1006075/14173/i/1600/depositphotos_141734434-stock-photo-birthday-cupcake-background.jpg");
+    border-radius: 30%;
+    filter: blur(50px);
+    
+    
+    
+}
+
+#fake{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    // background: rgba(206, 139, 14, 0.7);
+    z-index: -98;
+    opacity: .6;
+    background: pink;
+    
+    filter: grayscale(70%);
+    // background-image: url("https://st3.depositphotos.com/1006075/14173/i/1600/depositphotos_141734434-stock-photo-birthday-cupcake-background.jpg")
+    
+    
+}
+
+#address {
+    position: absolute;
+    height: 25%;
+    width: 100%;
+    // background: pink;
+    // right: 37%;
+    // left: 3%;
+    bottom: 0;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 14px;
+  }
+
+  #phoneNumber {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    // background: pink;
+    // left: 44%;
+    bottom: 0;
+    font-family: 'Amatic SC', cursive;
+    font-size: 14px;
+    text-align: center;
+    // font-size: 17px;
+    // text-align: center;
+  }
+
+  @media only screen and (min-width: 768px) {
+    #phoneNumber {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #address {
+        font-size: 18px;
+    }
+}

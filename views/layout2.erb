@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ready Baked Goods</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="index2.css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <script type="text/javascript"> 
+
+function stopRKey(evt) { 
+  var evt = (evt) ? evt : ((event) ? event : null); 
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;} 
+} 
+
+document.onkeypress = stopRKey; 
+
+</script>
+
+<style type="text/css">
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+#   font-weight:      bold;
+#   background-color: white
+  color:            white
+  } 
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+#   font-weight:      bold;
+  background-color: #ddd;
+  color:            #f0f;
+  color:            white;
+  } 
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  none;
+#   font-weight:      bold;
+#   background-color: blue;
+  color:            white
+  } 
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  none;
+#   font-weight:      bold;
+#   background-color: black;
+  color: white;
+  } 
+</style>
+
+
+</head>
+
+<body>
+    <div id="boss">
+        <div id="header">
+            <div id="menuContainer">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="nameContainer">
+
+                <form id="searchFormContainer" action="/search_results" method="post">
+                        <input name="search" id=searchForm type="text" placeholder="taste..."> 
+                        <input id="submitButton" type="submit" value="Submit">
+                
+
+                </form>
+
+                <!-- <div id="name">
+                    <span id="R">W</span>aked <span id="R">N</span><span id="R">B</span>aked
+                </div> -->
+            </div>
+            <div id="searchIconContainer">
+                <img id="searchIcon" src="https://cdn1.iconfinder.com/data/icons/web-and-mobile-ui-outline-icon-kit/512/UI_Icons_2-01-512.png">
+            </div>
+            
+            <div id="shoppingCartContainer">
+            <a href="/">
+                <img id="shoppingCartIcon" src="https://i.pinimg.com/originals/f2/b7/0b/f2b70bf1a21b7ab7a79724092e7a8549.jpg">
+                </a>
+                </div>
+                
+        </div>
+
+
+        <%=yield%>
+
+        <div id="footer">
+        <div id="address">
+        23 Hipster Lane, Brooklyn NY, 23185
+        
+        </div>
+
+        <div id="phoneNumber">
+        347-573-0879
+        
+        </div>
+            <div id="socialMediaContainer">
+                <div id="fbContainer">
+                    <img id="fb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/768px-F_icon.svg.png">
+                </div>
+                <div id="instaContainer">
+                    <img id="insta" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCY3Z5YZ7xh6SS2_FHnbQIGtibXU640iVxgmDeDRkQbVmVB3yv">
+                </div>
+
+                <div id="twitterContainer">
+                    <img id="twitter" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmKAwm_J-GUfp0YufQW9qkA8gOu7xJnx2lrZu1U00cQ5__BD6QmA">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="back"></div>
+    <div id="fake"></div>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>

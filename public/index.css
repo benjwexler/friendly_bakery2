@@ -1,0 +1,854 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: rgba(177, 205, 169, 0.07);
+}
+
+#background {
+  background-image: url("https://previews.123rf.com/images/kreatorex/kreatorex1503/kreatorex150300010/37406681-confectionery-and-bakery-background-with-elements-in-pastel-colors.jpg");
+  position: absolute;
+  height: 98vh;
+  width: 50%;
+  top: 1%;
+  z-index: -99;
+  margin: auto;
+  opacity: .5;
+  -webkit-filter: invert(100%) grayscale(70%);
+          filter: invert(100%) grayscale(70%);
+}
+
+#boss {
+  height: 98vh;
+  width: 97vw;
+  border: 3px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(60, 26, 138, 0.755)), to(rgba(143, 114, 210, 0.755)));
+  background: linear-gradient(to right, rgba(60, 26, 138, 0.755), rgba(143, 114, 210, 0.755));
+  max-width: 600px;
+  min-height: 568px;
+}
+
+#submitButton {
+  display: none;
+}
+
+#header {
+  height: 10%;
+  width: 100%;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #9fafc2;
+}
+
+#expandedMenu {
+  position: absolute;
+  background: #212121;
+  height: 25.5%;
+  width: 34%;
+  top: 11.5%;
+  opacity: .8;
+  border-radius: 5%;
+  display: none;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 20%;
+  -webkit-animation: appear 400ms steps(1);
+          animation: appear 400ms steps(1);
+  max-width: 120px;
+  z-index: 999;
+}
+
+@-webkit-keyframes expand {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 19.5%;
+  }
+}
+
+@keyframes expand {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 19.5%;
+  }
+}
+
+#menuRow1 {
+  height: 0%;
+  width: 0%;
+  border: 0px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  padding-bottom: 45%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#menuRow2 {
+  height: 0%;
+  width: 80%;
+  border: 0px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  padding-bottom: 35%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: appear 1500ms 1;
+          animation: appear 1500ms 1;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+#menuRow3 {
+  height: 0%;
+  width: 0%;
+  border: 0px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  color: white;
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#searchIcon {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  display: none;
+}
+
+#shoppingCartIcon {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  border: 7px dashed black;
+  opacity: .8;
+}
+
+#mainContainer {
+  height: 41%;
+  width: 100%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#split {
+  height: 8%;
+  width: 100%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 1%;
+}
+
+#searchFormContainer {
+  height: 100%;
+  width: 80%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#searchForm {
+  height: 100%;
+  width: 95%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #9fafc2;
+  margin: auto;
+  font-size: 30px;
+  text-align: right;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  font-family: 'Pacifico', cursive;
+}
+
+#searchBar {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(60, 26, 138, 0.755)), to(rgba(143, 114, 210, 0.755)));
+  background: linear-gradient(to right, rgba(60, 26, 138, 0.755), rgba(143, 114, 210, 0.755));
+  background: white;
+  opacity: .5;
+  border-bottom: 2px solid black;
+}
+
+#secondMainContainer {
+  height: 30%;
+  width: 100%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: rgba(59, 155, 199, 0.741);
+}
+
+#cakeContainer {
+  height: 79%;
+  width: 50%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: auto;
+  max-width: 200px;
+}
+
+#cake {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1.5px solid #393939;
+}
+
+#muffinContainer {
+  height: 80%;
+  width: 50%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+  max-width: 200px;
+}
+
+#muffin {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1.5px solid black;
+}
+
+#main1 {
+  height: 20%;
+  width: 100%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  border-bottom: 1px solid black;
+  border-top: 3px solid black;
+  background: Linear-gradient(to right, rgba(60, 26, 138, 0.755), rgba(143, 114, 210, 0.755));
+}
+
+#main1again {
+  height: 100%;
+  width: 100%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#cookieImageContainer {
+  height: 100%;
+  width: 100%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 350px;
+  margin: auto;
+  max-height: 300px;
+  border-radius: 50%;
+  position: relative;
+}
+
+#cookieImage {
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  max-width: 600px;
+  margin: auto;
+  border: 2px solid rgba(17, 17, 17, 0.639);
+}
+
+#cookiesText {
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #f1f506;
+  color: white;
+  text-shadow: 2px 2px #ff0000;
+  text-shadow: 2px 2px white;
+  border-radius: 50%;
+}
+
+#cakeText {
+  font-family: 'Amatic SC', cursive;
+  font-size: 45px;
+  position: absolute;
+  top: 64%;
+  left: 48%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 5px 20px #ff0000;
+  text-shadow: -3px 6px brown;
+  text-shadow: 2px 2px brown;
+  border-radius: 50%;
+  z-index: 50;
+}
+
+#muffinText {
+  font-family: 'Amatic SC', cursive;
+  font-size: 48px;
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 5px 20px #ff0000;
+  text-shadow: -3px 6px brown;
+  text-shadow: 2px 2px brown;
+  text-shadow: 3px 3px rgba(199, 122, 122, 0.913);
+  border-radius: 50%;
+  z-index: 50;
+}
+
+#menuContainer {
+  height: 90%;
+  width: 14%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  cursor: pointer;
+}
+
+#nameContainer {
+  height: 100%;
+  width: 52%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#name {
+  height: 80%;
+  width: 90%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 5% auto auto 10px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  color: #267940;
+  letter-spacing: .5px;
+}
+
+#R {
+  font-size: 35px;
+  color: blue;
+  margin-top: -5px;
+}
+
+#B {
+  font-size: 30px;
+}
+
+#G {
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 350px) {
+  #name {
+    font-size: 25px;
+  }
+  #R {
+    margin-top: 0px;
+    font-size: 38px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #name {
+    font-size: 45px;
+  }
+  #R {
+    font-size: 50px;
+  }
+}
+
+#searchIconContainer {
+  height: 100%;
+  width: 0%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+#shoppingCartContainer {
+  height: 100%;
+  width: 25%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+.bar1 {
+  width: 100%;
+  height: 14%;
+  background-color: #333;
+  margin: 50% auto auto 5%;
+  margin: auto auto auto 5%;
+  border-radius: 0%;
+  max-height: 14px;
+}
+
+.bar3 {
+  width: 90%;
+  height: 14%;
+  background-color: #333;
+  margin: auto auto auto 5%;
+  border-radius: 0%;
+  max-height: 14px;
+}
+
+.bar2 {
+  width: 70%;
+  height: 14%;
+  background-color: #333;
+  margin: auto auto auto 15%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0%;
+}
+
+#footer {
+  height: 10%;
+  width: 100%;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: white;
+  border-radius: 1%;
+  position: relative;
+}
+
+#socialMediaContainer {
+  height: 55%;
+  width: 30%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  max-width: 120px;
+}
+
+#fbContainer {
+  height: 100%;
+  width: 33%;
+  border: 3px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-height: 40px;
+  margin: auto;
+}
+
+#fb {
+  height: 100%;
+  width: 100%;
+}
+
+#instaContainer {
+  height: 100%;
+  width: 30%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  max-height: 40px;
+}
+
+#insta {
+  height: 100%;
+  width: 100%;
+}
+
+#twitterContainer {
+  height: 100%;
+  width: 33%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  max-height: 40px;
+}
+
+#twitter {
+  height: 100%;
+  width: 100%;
+}
+
+#freeShippingContainer {
+  height: 50%;
+  width: 26%;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  text-align: center;
+}
+
+#freeShippingText {
+  height: 80%;
+  width: 85%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  /* no underline */
+}
+
+#cookieImages {
+  height: 50px;
+  width: 50px;
+}
+
+#colLeft {
+  height: 100%;
+  width: 50%;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+#colRight {
+  height: 100%;
+  width: 50%;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+#cakeImageContainer {
+  position: relative;
+  height: 79%;
+  width: 85%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: auto;
+}
+
+#muffinImageContainer {
+  position: relative;
+  height: 79%;
+  width: 85%;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: auto;
+}
+
+#cakeImage {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1.5px solid #393939;
+}
+
+#muffinImage {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1.5px solid #393939;
+}
+
+#back {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  background-image: url("https://st3.depositphotos.com/1006075/14173/i/1600/depositphotos_141734434-stock-photo-birthday-cupcake-background.jpg");
+  border-radius: 30%;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+}
+
+#fake {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -98;
+  opacity: .6;
+  background: pink;
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+
+#address {
+  position: absolute;
+  height: 25%;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 14px;
+}
+
+#phoneNumber {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  font-family: 'Amatic SC', cursive;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  #phoneNumber {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #address {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
